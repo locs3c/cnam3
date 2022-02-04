@@ -14,7 +14,6 @@ import (
 	"time"
 
 	"github.com/miekg/dns"
-	"github.com/gookit/color"
 )
 
 func main() {
@@ -66,9 +65,8 @@ func main() {
 				cname = strings.TrimSuffix(cname, ".")
 
 				if verbose {
-					//fmt.Println(domColor string(j.domain)) + " -> " + cnColor(cname))
-					fmt.Prinln("%s,%s\n", string(j.domain) + " -> " + cname )
-					//fmt.Printf("%s,%s\n", cname, string(j.domain))
+
+					fmt.Printf("%s,%s\n", string(j.domain), cname )
 				} else {
 					fmt.Printf("%s\n", cname)
 				}
