@@ -34,7 +34,7 @@ func main() {
 		"8.8.4.4",
 	}
 var (
-	erColor  = color.Style{color.BgRed, color.OpBold}.Render
+	//erColor  = color.Style{color.BgRed, color.OpBold}.Render
 	domColor = color.Style{color.FgYellow, color.OpBold}.Render
 	cnColor  = color.Style{color.FgLightMagenta, color.OpBold}.Render
 )
