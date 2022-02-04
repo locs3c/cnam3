@@ -70,7 +70,8 @@ var (
 				cname = strings.TrimSuffix(cname, ".")
 
 				if verbose {
-					fmt.Printf("%s,%s\n", cname, string(j.domain))
+					fmt.Println(domColor string(j.domain)) + " -> " + cnColor(cname))
+					//fmt.Printf("%s,%s\n", cname, string(j.domain))
 				} else {
 					fmt.Printf("%s\n", cname)
 				}
