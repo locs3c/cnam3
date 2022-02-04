@@ -33,11 +33,7 @@ func main() {
 		"8.8.8.8",
 		"8.8.4.4",
 	}
-var (
-	//erColor  = color.Style{color.BgRed, color.OpBold}.Render
-	domColor = color.Style{color.FgYellow, color.OpBold}.Render
-	cnColor  = color.Style{color.FgLightMagenta, color.OpBold}.Render
-)
+
 
 	// Try to grab a better list of DNS servers
 	resp, err := http.Get("https://raw.githubusercontent.com/BBerastegui/fresh-dns-servers/master/resolvers.csv")
@@ -70,7 +66,8 @@ var (
 				cname = strings.TrimSuffix(cname, ".")
 
 				if verbose {
-					fmt.Println(domColor string(j.domain)) + " -> " + cnColor(cname))
+					//fmt.Println(domColor string(j.domain)) + " -> " + cnColor(cname))
+					fmt.Prinln("%s,%s\n", string(j.domain) + " -> " + cname )
 					//fmt.Printf("%s,%s\n", cname, string(j.domain))
 				} else {
 					fmt.Printf("%s\n", cname)
